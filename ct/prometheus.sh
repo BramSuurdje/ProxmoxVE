@@ -54,6 +54,8 @@ function default_settings() {
 
 function update_script() {
 header_info
+check_container_storage
+check_container_resources
 if [[ ! -f /etc/systemd/system/prometheus.service ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
 RELEASE=$(curl -s https://api.github.com/repos/prometheus/prometheus/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4) }')
 if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_version.txt)" ]]; then
@@ -66,7 +68,6 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   tar -xf prometheus-${RELEASE}.linux-amd64.tar.gz
   cd prometheus-${RELEASE}.linux-amd64
   cp -rf prometheus promtool /usr/local/bin/
-  cp -rf consoles/ console_libraries/ /etc/prometheus/
   cd ~
   rm -rf prometheus-${RELEASE}.linux-amd64 prometheus-${RELEASE}.linux-amd64.tar.gz
   echo "${RELEASE}" >/opt/${APP}_version.txt

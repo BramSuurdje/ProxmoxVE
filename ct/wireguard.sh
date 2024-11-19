@@ -53,6 +53,9 @@ function default_settings() {
 }
 
 function update_script() {
+header_info
+check_container_storage
+check_container_resources
 if [[ ! -d /etc/wireguard ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
 apt-get update
 apt-get -y upgrade
@@ -68,4 +71,4 @@ description
 
 msg_ok "Completed Successfully!\n"
 echo -e "WGDashboard should be reachable by going to the following URL.
-         ${BL}http://${IP}:10086${CL} admin|admin \n"
+         ${BL}http://${IP}:10086${CL} \n"

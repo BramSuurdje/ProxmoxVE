@@ -13,6 +13,76 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 > [!NOTE]
 All LXC instances created using this repository come pre-installed with Midnight Commander, which is a command-line tool (`mc`) that offers a user-friendly file and directory management interface for the terminal environment.
 
+> [!IMPORTANT]
+Do not break established syntax in this file, as it is automatically updated by a Github Workflow
+
+
+
+
+## 2024-11-19
+
+### Changed
+
+### 🚀 Updated Scripts
+
+- Linkwarden: Move Secret Key above in install.sh [@MickLesk](https://github.com/MickLesk) ([#356](https://github.com/community-scripts/ProxmoxVE/pull/356))
+- Linkwarden: add gnupg to installed dependencies [@erfansamandarian](https://github.com/erfansamandarian) ([#349](https://github.com/community-scripts/ProxmoxVE/pull/349))
+- Fix Wallos Update [@MickLesk](https://github.com/MickLesk) ([#339](https://github.com/community-scripts/ProxmoxVE/pull/339))
+
+### 🧰 Maintenance
+
+- [chore] Update FUNDING.yml [@MickLesk](https://github.com/MickLesk) ([#352](https://github.com/community-scripts/ProxmoxVE/pull/352))
+
+## 2024-11-18
+
+### Changed
+
+### 💥 Breaking Changes
+
+- Massive Update - Remove old storage check, add new storage and resource check to all scripts - Remove downscaling with pct set [@MickLesk](https://github.com/MickLesk) ([#333](https://github.com/community-scripts/ProxmoxVE/pull/333))
+
+### ✨ New Scripts
+
+- new scripts for NetBox [@bvdberg01](https://github.com/bvdberg01) ([#308](https://github.com/community-scripts/ProxmoxVE/pull/308))
+
+### 🚀 Updated Scripts
+
+- Support SSE 4.2 in Frigate script [@anishp55](https://github.com/anishp55) ([#328](https://github.com/community-scripts/ProxmoxVE/pull/328))
+- Bugfix: Wallos Patch (Cron Log & Media Backup)  [@MickLesk](https://github.com/MickLesk) ([#331](https://github.com/community-scripts/ProxmoxVE/pull/331))
+- Linkwarden - Harmonize Script, Add Monolith & Bugfixing [@MickLesk](https://github.com/MickLesk) ([#306](https://github.com/community-scripts/ProxmoxVE/pull/306))
+- Fix optional installs in Cockpit LXC [@havardthom](https://github.com/havardthom) ([#317](https://github.com/community-scripts/ProxmoxVE/pull/317))
+
+### 🌐 Website
+
+- Added additional instructions to nginxproxymanager [@newzealandpaul](https://github.com/newzealandpaul) ([#329](https://github.com/community-scripts/ProxmoxVE/pull/329))
+
+### 🧰 Maintenance
+
+- Verify changes before commit in changelog-pr.yml [@havardthom](https://github.com/havardthom) ([#310](https://github.com/community-scripts/ProxmoxVE/pull/310))
+
+## 2024-11-17
+
+### Changed
+
+### ✨ New Scripts
+
+- Add Komga LXC [@DysfunctionalProgramming](https://github.com/DysfunctionalProgramming) ([#275](https://github.com/community-scripts/ProxmoxVE/pull/275))
+
+### 🚀 Updated Scripts
+
+- Tweak: Patch Prometheus for v.3.0.0 [@MickLesk](https://github.com/MickLesk) ([#300](https://github.com/community-scripts/ProxmoxVE/pull/300))
+- Wavelog - Small Adjustment [@HB9HIL](https://github.com/HB9HIL) ([#292](https://github.com/community-scripts/ProxmoxVE/pull/292))
+
+### 🌐 Website
+
+- Add Note for Komga Installation (Website)  [@MickLesk](https://github.com/MickLesk) ([#303](https://github.com/community-scripts/ProxmoxVE/pull/303))
+- Fix Komga logo [@havardthom](https://github.com/havardthom) ([#298](https://github.com/community-scripts/ProxmoxVE/pull/298))
+
+### 🧰 Maintenance
+
+- Add github workflow for automatic changelog PR  [@havardthom](https://github.com/havardthom) ([#299](https://github.com/community-scripts/ProxmoxVE/pull/299))
+- Use website label in autolabeler [@havardthom](https://github.com/havardthom) ([#297](https://github.com/community-scripts/ProxmoxVE/pull/297))
+
 ## 2024-11-16
 
 ### Changed
@@ -21,6 +91,8 @@ All LXC instances created using this repository come pre-installed with Midnight
   - NEW Script
 - **Wavelog LXC** [(View Source)](https://github.com/community-scripts/ProxmoxVE/blob/main/install/wavelog-install.sh)
   - NEW Script
+- **Vaultwarden LXC:** RAM has now been increased to 6144 MB [(PR)](https://github.com/community-scripts/ProxmoxVE/pull/285)
+  - Breaking Change
 
 
 ## 2024-11-05
