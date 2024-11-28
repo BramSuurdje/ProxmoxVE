@@ -106,20 +106,6 @@ export default function Page() {
               Make managing your Homelab a breeze
             </h1>
             <p className="max-w-2xl text-center text-lg leading-relaxed tracking-tight text-muted-foreground md:text-xl">
-              We are a community-driven initiative that simplifies the setup of
-              Proxmox Virtual Environment (VE).
-              <br />
-              <br />
-              Originally created by{" "}
-              <a href="https://github.com/tteck" target="_blank">
-                tteck
-              </a>
-              , these scripts automate and streamline
-              <br />
-              the process of creating and configuring Linux containers (LXC) and
-              virtual machines (VMs) on Proxmox VE.
-              <br />
-              <br />
               With 200+ scripts to help you manage your{" "}
               <b>Proxmox VE environment</b>.<br />
               Whether you&#39;re a seasoned user or a newcomer, we&#39;ve got
