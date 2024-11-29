@@ -1,7 +1,7 @@
 import { Category } from "./types";
 
 export const fetchCategories = async () => {
-  const response = await fetch("api/categories");
+  const response = await fetch("/ProxmoxVE/api/categories");
   if (!response.ok) {
     throw new Error(`Failed to fetch categories: ${response.statusText}`);
   }
