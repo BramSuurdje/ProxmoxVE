@@ -11,7 +11,7 @@ export interface AnimatedListProps {
 
 export const AnimatedList = React.memo(
   ({ className, children, delay = 1000 }: AnimatedListProps) => {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(7);
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
       [children],
@@ -54,7 +54,7 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
     transition: { type: "spring", stiffness: 350, damping: 40 },
   };
   return (
-    <motion.div {...animations} className="mx-auto w-full">
+    <motion.div {...animations} className="mx-auto w-full truncate">
       {children}
     </motion.div>
   );

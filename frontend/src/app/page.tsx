@@ -1,23 +1,15 @@
 "use client";
-import AboutUs from "@/components/AboutUs";
 import { BentoGridLandingPage } from "@/components/BentoGrid";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import {
-  ArrowRightIcon,
-  Github,
-  Server,
-  Home,
-  Users,
-  Heart,
+  ArrowRightIcon
 } from "lucide-react";
 import Link from "next/link";
-import { AiOutlineDiscord, AiOutlineGithub } from "react-icons/ai";
 
 function CustomArrowRightIcon() {
   return <ArrowRightIcon className="h-4 w-4" width={1} />;
@@ -26,7 +18,7 @@ function CustomArrowRightIcon() {
 export default function Page() {
   return (
     <>
-      <section className="py-20">
+      <section className="pt-20">
         <div className="w-full">
           <div className="container mx-auto">
             <div className="flex h-[80vh] flex-col items-center justify-center gap-4 lg:py-40">
@@ -75,59 +67,21 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="py-20">
-        <MaxWidthWrapper>
-          <Card className="w-full max-w-3xl mx-auto shadow-md">
-            <CardHeader>
-              <CardTitle className="text-4xl font-bold">About Us</CardTitle>
-            </CardHeader>
-            <CardContent className="">
-              <div className="flex flex-col gap-4">
-                <div className="text-md leading-relaxed tracking-tight items-center text-muted-foreground">
-                  We are the community edition of{" "}
-                  <span className="font-semibold text-primary">
-                    Proxmox VE Helper Scripts
-                  </span>
-                  , carrying forward the vision of{" "}
-                  <Badge className="h-6 bg-background border-foreground text-foreground inline-flex items-center gap-1">
-                    <img
-                      src="https://avatars.githubusercontent.com/u/21342670?v=4"
-                      className="w-4 h-4 inline"
-                    />
-                    tteck
-                  </Badge>
-                  , our project's brilliant creator. who unfortunately has
-                  passed away.
-                </div>
 
-                <div className="flex flex-col items-center gap-2">
-                  <p className="font-medium text-2xl">
-                    Join our community today!
-                  </p>
-                  <div className="flex gap-4">
-                    <Link
-                      href="https://github.com/community-scripts/ProxmoxVE"
-                      className="flex items-center gap-2 text-primary hover:underline"
-                    >
-                      <AiOutlineGithub className="w-5 h-5" />
-                      GitHub
-                    </Link>
-                    <Link
-                      href="https://discord.gg/2wvnMDgdnU"
-                      className="flex items-center gap-2 text-primary hover:underline"
-                    >
-                      <AiOutlineDiscord className="w-5 h-5" />
-                      Discord
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </MaxWidthWrapper>
-      </section>
-      <section className="py-20">
+      <section className="pb-20">
         <BentoGridLandingPage />
+      </section>
+      <section className="pb-20">
+        <MaxWidthWrapper>
+          <div className="relative">
+            <HeroVideoDialog
+              animationStyle="top-in-bottom-out"
+              videoSrc="https://www.youtube.com/embed/kcpu4z5eSEU?si=4rb-zSdDkVK9qxxb"
+              thumbnailSrc="https://i.ytimg.com/vi/kcpu4z5eSEU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBI0QZ1yQCWFY7cTzYYeq-Q6i_WBg"
+              thumbnailAlt="Hero Video"
+            />
+          </div>
+        </MaxWidthWrapper>
       </section>
     </>
   );

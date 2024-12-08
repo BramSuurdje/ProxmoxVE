@@ -91,7 +91,13 @@ const ScriptCard = ({ name, logo }: Script) => {
     >
       <div className="flex flex-row items-center gap-3 w-max">
         <div className="flex size-10 items-center bg-secondary justify-center rounded-2xl">
-          <img className="size-6 rounded-md" src={logo ?? ""} />
+          <img
+            className="size-6 rounded-md"
+            src={logo ?? "logo"}
+            onError={(e) => {
+              e.currentTarget.src = "logo";
+            }}
+          />
         </div>
         <div className="flex flex-col overflow-hidden">
           <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
@@ -130,7 +136,7 @@ export function AnimatedListBentoGridItem({
         className,
       )}
     >
-      <AnimatedList delay={2000}>
+      <AnimatedList delay={3500}>
         {scripts.map((item, idx) => (
           <ScriptCard {...item} key={idx} />
         ))}
