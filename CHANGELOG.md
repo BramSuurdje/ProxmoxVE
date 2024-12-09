@@ -16,6 +16,52 @@ All LXC instances created using this repository come pre-installed with Midnight
 > [!IMPORTANT]
 Do not break established syntax in this file, as it is automatically updated by a Github Workflow
 
+## 2024-12-08
+
+### Changed
+
+### 🚀 Updated Scripts
+
+- Use MongoDB 4.4 in Unifi for non-AVX users [@havardthom](https://github.com/havardthom) ([#691](https://github.com/community-scripts/ProxmoxVE/pull/691))
+
+### 🌐 Website
+
+- Move homarr to Dashboards section [@CrazyWolf13](https://github.com/CrazyWolf13) ([#740](https://github.com/community-scripts/ProxmoxVE/pull/740))
+
+## 2024-12-07
+
+### Changed
+
+### 🚀 Updated Scripts
+
+- Zigbee2MQTT: Remove dev branch choice until v2.0.0 release [@havardthom](https://github.com/havardthom) ([#702](https://github.com/community-scripts/ProxmoxVE/pull/702))
+- Fix Hoarder build failure by installing Chromium stable [@vhsdream](https://github.com/vhsdream) ([#723](https://github.com/community-scripts/ProxmoxVE/pull/723))
+
+### 🌐 Website
+
+- Bugfix: Include script name in website search [@havardthom](https://github.com/havardthom) ([#731](https://github.com/community-scripts/ProxmoxVE/pull/731))
+
+### ❔ Unlabelled
+
+- Fix broken build.func [@havardthom](https://github.com/havardthom) ([#736](https://github.com/community-scripts/ProxmoxVE/pull/736))
+
+## 2024-12-06
+
+### Changed
+
+### 🚀 Updated Scripts
+
+- Fix bugs in Komga update [@DysfunctionalProgramming](https://github.com/DysfunctionalProgramming) ([#717](https://github.com/community-scripts/ProxmoxVE/pull/717))
+- Bookstack: Fix Update function composer [@michelroegl-brunner](https://github.com/michelroegl-brunner) ([#700](https://github.com/community-scripts/ProxmoxVE/pull/700))
+
+### 🌐 Website
+
+- fix: note component in json-editor getting out of focus when typing and revert theme switch animation [@BramSuurdje](https://github.com/BramSuurdje) ([#706](https://github.com/community-scripts/ProxmoxVE/pull/706))
+
+### 🧰 Maintenance
+
+- Update frontend CI/CD workflow [@havardthom](https://github.com/havardthom) ([#703](https://github.com/community-scripts/ProxmoxVE/pull/703))
+
 ## 2024-12-05
 
 ### Changed
