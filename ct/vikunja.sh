@@ -67,10 +67,10 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
 
   msg_info "Updating ${APP} to ${RELEASE}"
   cd /opt
-  rm -rf /opt/*
+  rm -rf /opt/vikunja/vikunja
   wget -q "https://dl.vikunja.io/vikunja/$RELEASE/vikunja-$RELEASE-amd64.deb"
   DEBIAN_FRONTEND=noninteractive dpkg -i vikunja-$RELEASE-amd64.deb &>/dev/null
-  echo "${RELEASE}" >/opt/${APPLICATION}_version.txt
+  echo "${RELEASE}" >/opt/${APP}_version.txt
   msg_ok "Updated ${APP}"
 
   msg_info "Starting ${APP}"
