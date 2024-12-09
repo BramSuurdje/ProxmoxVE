@@ -54,7 +54,11 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
     transition: { type: "spring", stiffness: 350, damping: 40 },
   };
   return (
-    <motion.div {...animations} className="mx-auto w-full truncate">
+    <motion.div
+      {...animations}
+      // @ts-ignore
+      className="mx-auto w-full truncate"
+    >
       {children}
     </motion.div>
   );
